@@ -9,7 +9,7 @@ const redisClient = redis.createClient();
 const asyncGet = promisify(redisClient.get).bind(redisClient);
 
 app.get('/', async (req, res) => {
-  const username = req.query.username || 'devahoy';
+  const username = req.query.username || 'arsarawut';
 
   const url = `https://api.github.com/users/${username}`;
 
@@ -24,6 +24,6 @@ app.get('/', async (req, res) => {
   return res.json(response.data);
 });
 
-app.listen(9000, () => {
+app.listen(3000, () => {
   console.log('running');
 });
