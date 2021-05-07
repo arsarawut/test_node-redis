@@ -7,7 +7,8 @@ const app = express();
 
 const redisPassword = "123456789" ; 
 const redisClient = redis.createClient({
-          host : '127.0.0.1',  
+          host : '127.0.0.1',
+          port : 6379,
           no_ready_check: true,
           auth_pass: redisPassword,                                                                                                                                                           
 });                  
